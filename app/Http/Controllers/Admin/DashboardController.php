@@ -45,7 +45,7 @@ class DashboardController extends Controller
     public function updateUser(Request $request){
         $id = $request->input('id');
         $this->userIsAdmin();
-        if($id!=1){
+        if($id==1){
             return ['error'=>"Please don't update Admin User "];
         }
         $validatedData = $request->validate([
